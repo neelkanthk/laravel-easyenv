@@ -11,14 +11,14 @@ class DisableEnv extends EasyEnvCommand
      *
      * @var string
      */
-    protected $signature = 'easyenv:disable {env}';
+    protected $signature = 'easyenv:disable';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Disable an enabled environment.';
+    protected $description = 'Disable currently enabled environment.';
 
     /**
      * Create a new command instance.
@@ -37,22 +37,17 @@ class DisableEnv extends EasyEnvCommand
      */
     public function handle()
     {
-        $this->setEnv();
         if (is_null(config("easyenv"))) {
             $this->showConfigFileMissingError();
         } else {
-            $env = $this->getEnv();
-            $existingConfig = config("easyenv");
-            $enabledEnv = config("easyenv.enabled");
-            $environments = $existingConfig["environments"];
-            if ($env == $enabledEnv) {
+            $this->warn("\nAttention: This will cause the application to look for .env file at: " . base_path('.env'));
+            $userInput = $this->confirm("If you want to proceed type 'y' or 'yes' and press Enter.");
+            if ($userInput) {
+                $existingConfig = config("easyenv");
                 $existingConfig["enabled"] = "";
                 $newConfig = var_export($existingConfig, true);
                 $this->updateConfigFile($newConfig);
                 $this->info("Done");
-            } else {
-                $this->warn("\nThe provided environment is not enabled.");
-                $this->info("\nLet's enable it first using 'php artisan easyenv:enable {env}'");
             }
         }
     }
