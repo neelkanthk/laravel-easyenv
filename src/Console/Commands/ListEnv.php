@@ -61,7 +61,7 @@ class ListEnv extends EasyEnvCommand
                 }
             } else {
                 $this->warn("\nAttention: No environments are added. The default .env file of Laravel will be used.");
-                $this->info("\nLet's add one using 'php artisan easyenv:add {env} {path}'");
+                $this->info("\nLet's add one using 'php artisan easyenv:add {env} {path} {file}'");
             }
         }
         $this->line("");

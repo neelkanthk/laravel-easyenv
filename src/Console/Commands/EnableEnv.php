@@ -51,7 +51,7 @@ class EnableEnv extends EasyEnvCommand
                 $this->info("Done");
             } else {
                 $this->warn("\nThe provided environment is not added in the list.");
-                $this->info("\nLet's add one using 'php artisan easyenv:add {env} {path}'");
+                $this->info("\nLet's add one using 'php artisan easyenv:add {env} {path} {file}'");
             }
         }
     }
