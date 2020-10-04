@@ -1,7 +1,7 @@
 {
     "name": "neelkanthk/laravel-easyenv",
-    "description": "Easily manage and switch between multiple environment files using commands.",
-    "keywords": ["laravel", "env", "environment"],
+    "description": "Easily manage and switch between multiple environment files using cli.",
+    "keywords": ["laravel", "env", "environment-configuration"],
     "type": "package",
     "license": "MIT",
     "authors": [
