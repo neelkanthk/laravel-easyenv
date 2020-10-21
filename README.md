@@ -1,4 +1,4 @@
-![Laravel Surveillance Logo](https://github.com/neelkanthk/repo_logos/blob/master/LaravelEasyEnv_logo.png?raw=true)
+![Laravel EasyEnv Logo](https://github.com/neelkanthk/repo_logos/blob/master/LaravelEasyEnv_logo.png?raw=true)
 
 # EasyEnv
 
