@@ -1,3 +1,5 @@
+![Laravel Surveillance Logo](https://github.com/neelkanthk/repo_logos/blob/master/LaravelEasyEnv_logo.png?raw=true)
+
 # EasyEnv
 
 A Laravel package to easily manage and switch between multiple environment files using artisan cli.
