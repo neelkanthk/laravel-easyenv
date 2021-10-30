@@ -16,21 +16,41 @@ class EasyEnvCommand extends Command
         parent::__construct();
     }
 
+    /**
+     * Get the environment name
+     *
+     * @return void
+     */
     public function getEnv()
     {
         return $this->env;
     }
 
+    /**
+     * Get path
+     *
+     * @return void
+     */
     public function getPath()
     {
         return $this->path;
     }
     
+    /**
+     * Get file
+     *
+     * @return void
+     */
     public function getFile()
     {
         return $this->file;
     }
 
+    /**
+     * Load the config file
+     *
+     * @return void
+     */
     public function getConfig()
     {
         return $this->config;
