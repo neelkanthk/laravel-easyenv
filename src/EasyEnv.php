@@ -4,7 +4,11 @@ namespace Neelkanth\Laravel\EasyEnv;
 
 class EasyEnv
 {
-
+    /**
+     * Get the enabled environment file
+     *
+     * @return string
+     */
     public static function file()
     {
         //Get enabled env file
@@ -16,6 +20,11 @@ class EasyEnv
         return $envFile;
     }
 
+    /**
+     * Get the path of the enabled environment file
+     *
+     * @return string
+     */
     public static function path()
     {
         //Get enabled env file path
@@ -27,6 +36,11 @@ class EasyEnv
         return $envPath;
     }
 
+    /**
+     * Check if the environment file exists or not
+     *
+     * @return bool
+     */
     public static function envFileExists()
     {
         $config = require config_path('easyenv.php');
